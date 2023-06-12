@@ -117,4 +117,13 @@ class Jeu(object):
                   rect = rendu.get_rect()
                   rect.center = position
                   self.surface.blit(rendu, rect)
+            
+            def _attente(self):
+                  print("Attente")
+                  while self._getEvent()== None:
+                        self._rendre()
+            def _rendre(self):
+                  pygame.display.update()
+                  self.clock.tick()
+
 
