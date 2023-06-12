@@ -53,4 +53,5 @@ for k,v in PIECES.items():
     for p in v:
             print (p, '\n')
 
-        
+for name, rotations in PIECES.items():
+      PIECES[name] = [[[int(i) for i in p] for p in r.splitlines()] for r in rotations] 
