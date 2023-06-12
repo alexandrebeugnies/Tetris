@@ -172,7 +172,8 @@ class Jeu(object):
                                     if k != 0:
                                         coords.append([i+self.position[0], j+self.position[1]])
                                         coordonnees = coords
-                                        # print("Rotation testee : %s" % coordonnees)
+                                        # print("Rotation testee : %s" % coordonnees) ==> A continuer p.639
+
                               
 
 
