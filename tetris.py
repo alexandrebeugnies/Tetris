@@ -137,5 +137,10 @@ class Jeu(object):
                               if event.key == K_ESCAPE:
                                     continue
                               return event.key
+                        
+            def _quitter(self):
+                  print("Quitter")
+                  pygame.quit()
+                  sys.exit()
 
 
