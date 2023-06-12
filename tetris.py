@@ -55,3 +55,8 @@ for k,v in PIECES.items():
 
 for name, rotations in PIECES.items():
       PIECES[name] = [[[int(i) for i in p] for p in r.splitlines()] for r in rotations] 
+
+TAILLE_FENETRE = 640, 480
+DIM_PLATEAU = 10, 20
+BORDURE_PLATEAU = 4
+TAILLE_BLOC = 20, 20
