@@ -142,5 +142,14 @@ class Jeu(object):
                   print("Quitter")
                   pygame.quit()
                   sys.exit()
+        
+            def _getPiece(self):
+                  return PIECES.get(random.choice(PIECES_KEYS))
+            def _getCurrentPieceColor(self):
+                  for l in self.current[0]:
+                        for c in l:
+                              if c != 0:
+                                    return c
+                              
 
 
