@@ -125,5 +125,17 @@ class Jeu(object):
             def _rendre(self):
                   pygame.display.update()
                   self.clock.tick()
+            
+            def _getEvent(self):
+                  for event in pygame.event.get():
+                        if event.type == QUIT:
+                              self._quitter()
+                        if event.type == KEYUP:
+                              if event.type == K_ESCAPE:
+                                    self._quitter()
+                        if event.type == KEYDOWN:
+                              if event.key == K_ESCAPE:
+                                    continue
+                              return event.key
 
 
