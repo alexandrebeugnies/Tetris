@@ -1,3 +1,13 @@
+# -*- coding: utf-8 -*-
+
+import random
+import time
+import pygame
+import sys
+from pygame.locals import *
+
+from constantes import *
+
 PIECES = {
     'O':{
         '0000\n0110\n0110\n0000',
@@ -77,4 +87,5 @@ POSITION_TETRIS = POSITION_SCORE[0], 210
 POSITION_NIVEAU = POSITION_SCORE[0], 240
 
 GRAVITE = 0.35
+
 
