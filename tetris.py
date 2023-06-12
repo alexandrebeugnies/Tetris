@@ -88,4 +88,13 @@ POSITION_NIVEAU = POSITION_SCORE[0], 240
 
 GRAVITE = 0.35
 
-
+class Jeu(object):
+      def __init__(self):
+            pygame.init()
+            self.clock = pygame.time.Clock()
+            self.surface = pygame.display.set_mode(TAILLE_FENETRE)
+            self.fonts = {
+                  'defaut': pygame.font.Font('freesansbold.ttf', 18),
+                  'titre': pygame.font.Font('freesansbold.ttf', 100),
+            }
+            pygame.display.set_caption('Tetris Game')
