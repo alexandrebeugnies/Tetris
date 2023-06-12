@@ -98,3 +98,8 @@ class Jeu(object):
                   'titre': pygame.font.Font('freesansbold.ttf', 100),
             }
             pygame.display.set_caption('Tetris Game')
+            def start(self):
+                  self._afficherTexte('Tetris', CENTRE_FENETRE, font='titre')
+                  self._afficherTexte('Appuyer sur une touche ...', POS)
+                  self._attente()
+                  
