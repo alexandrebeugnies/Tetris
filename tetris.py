@@ -312,4 +312,13 @@ class Jeu(object):
                               self._gererGravite()
                               self._dessinerPlateau()            
 
+if __name__ == '__main__':
+      j = Jeu()
+      print("Jeu Pret")
+      j.start()
+      print("Partie demarree")
+      j.play()
+      print("Partie Terminee")
+      j.stop()
+      print("Arret du Programme")
 
