@@ -264,7 +264,21 @@ class Jeu(object):
                                           a += 1
                                     self.position[1] += a-1
                               self._calculerDonneesPieceCourante()           
-
+                  def _gererGravite(self):
+                        if time.time() - self.derniere_chute > GRAVITE:
+                              self.derniere_chute = time.time()
+                              if not self._estValide():
+                                    print("On est dans une position invalide")
+                                    self.position[1] -= 1
+                                    self._calculerDonneesPieceCourante()
+                                    self._poserPiece()
+                              elif self._estValide() and not self._estValide(y=1):
+                                    self._calculerDonneesPieceCourante()
+                                    self._poserPiece()
+                              else:
+                                    print("On deplace vers le bas")
+                                    self.position[1] += 1
+                                    self._calculerDonneesPieceCourante() 
 
                               
 
