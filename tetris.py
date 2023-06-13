@@ -219,7 +219,11 @@ class Jeu(object):
                                           self.score += self.niveau * self.tetris 
                                     # Travail avec la piece courante termine
                                     self.current = None
-                                    
+                  def _first(self):
+                        self.plateau = [[0] * DIM_PLATEAU[0] for i in range(DIM_PLATEAU[1])]
+                        self.score, self.pieces, self.lignes , self.tetris, self.niveau = 0, 0, 0, 0, 1
+                        self.current, self.next, self.perdu = None, self._getPiece(), False
+                                          
 
                               
 
