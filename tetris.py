@@ -238,6 +238,14 @@ class Jeu(object):
                               self._afficherTexte('Pause',CENTRE_FENETRE,font = 'titre')
                               self._afficherTexte('Appuyer sur une touche ...',POS)
                               self._attente()
+                        elif event == K_LEFT:
+                              print("Mouvement vers la gauche")
+                              if self._estValide(x = -1):
+                                    self.position[0] -= 1
+                        elif event == K_RIGHT:
+                              print("Mouvement vers la droite")
+                              if self._estValide(x = 1):
+                                    self.position[0] += 1
 
 
 
