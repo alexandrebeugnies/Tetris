@@ -179,7 +179,14 @@ class Jeu(object):
                                                 return False
                                           elif cy < 0:
                                                 continue
-                                          
+                                          elif y + cy >= max_y:
+                                                 #print("Non valide en Y: cy=%s, y=%s" % (cy, y))
+                                                 return False
+                                          else:
+                                                if self.plateau[cy+y] [cx+x] != 0:
+                                                      #print("Position occupee sur le plateau")
+                                                      return False
+                                          return True 
 
 
                               
