@@ -294,7 +294,13 @@ class Jeu(object):
                                                 couleur = COULEURS.get(self._getCurrentPieceColor())
                                                 coordonnees = tuple([START_PLATEAU[k] + position[k] *TAILLE_BLOC[k] for k in range(2)])
                                                 pygame.draw.rect(self.surface, couleur, coordonnees + TAILLE_BLOC)
-                                                
+                                                self._afficherTexte('Score : >%s' % self.score, POSITION_SCORE)
+                                                self._afficherTexte('Pieces : >%s' % self.pieces, POSITION_PIECES)
+                                                self._afficherTexte('Lignes : >%s' % self.lignes, POSITION_LIGNES)
+                                                self._afficherTexte('Tetris : >%s' % self.tetris, POSITION_TETRIS)
+                                                self._afficherTexte('Niveau : >%s' % self.niveau, POSITION_NIVEAU)
+                                                self.rendre()
+
                               
 
 
