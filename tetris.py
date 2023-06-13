@@ -191,7 +191,20 @@ class Jeu(object):
                         print("La piece est posee")
                         if self.position[1] <= 0:
                               self.perdu = True
-                              
+                        # Ajout de la piece parmi le plateau
+                        couleur = self._getCurrentPieceColor()
+                        for cx, cy in self.coordonnees:
+                              self.plateau[cy][cx] = couleur
+                        completees = []
+                        # calculer les lignes completees
+                        for i, line in enumerate(self.plateau[::-1]):
+                              for case in line:
+                                    if case == 0:
+                                          break
+                                    else:
+                                          print (self.plateau)
+                                          print(">>> %s" % (DIM_PLATEAU[1]-1-i))
+                                          completees.append(DIM_PLATEAU[1]-1-i)
 
                               
 
