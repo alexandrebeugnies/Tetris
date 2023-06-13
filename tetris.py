@@ -205,6 +205,9 @@ class Jeu(object):
                                           print (self.plateau)
                                           print(">>> %s" % (DIM_PLATEAU[1]-1-i))
                                           completees.append(DIM_PLATEAU[1]-1-i)
+                                    lignes = len(completees)
+                                    for i in completees:
+                                          self.plateau.pop(i)
 
                               
 
