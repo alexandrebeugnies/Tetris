@@ -223,7 +223,13 @@ class Jeu(object):
                         self.plateau = [[0] * DIM_PLATEAU[0] for i in range(DIM_PLATEAU[1])]
                         self.score, self.pieces, self.lignes , self.tetris, self.niveau = 0, 0, 0, 0, 1
                         self.current, self.next, self.perdu = None, self._getPiece(), False
-                                          
+                  def _next(self):
+                        print("Piece suivante")
+                        self.current, self.next = self.next, self._getPiece()
+                        self.pieces += 1
+                        self.position = [int(DIM_PLATEAU[0] / 2)-2, -4, 0]
+                        self._calculerDonneesPieceCourante()
+                        self.dernier_mouvement  = self.derniere_chute = time.time()                        
 
                               
 
