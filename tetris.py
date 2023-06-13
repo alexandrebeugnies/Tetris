@@ -279,7 +279,17 @@ class Jeu(object):
                                     print("On deplace vers le bas")
                                     self.position[1] += 1
                                     self._calculerDonneesPieceCourante() 
-
+                  def _dessinerPlateau(self):
+                        self.surface.fill(COULEURS.get(0))
+                        pygame.draw.rect(self.surface, COULEURS[8], 
+                        START_PLABORD + TAILLE_PLABORD, BORDURE_PLATEAU)
+                        for i, ligne in enumerate(self.plateau):
+                              for j, case in enumerate(ligne):
+                                    couleur = COULEURS[case]
+                                    position = j, i
+                                    coordonnees = tuple([START_PLATEAU[k] + position[k] * TAILLE_BLOC[k] for k in range(2)])
+                                    pygame.draw.rect(self.surface, couleur, coordonnees + TAILLE_BLOC)
+                  
                               
 
 
