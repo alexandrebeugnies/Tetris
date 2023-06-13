@@ -246,7 +246,11 @@ class Jeu(object):
                               print("Mouvement vers la droite")
                               if self._estValide(x = 1):
                                     self.position[0] += 1
-
+                        elif event == K_DOWN:
+                              print("Mouvement vers le bas")
+                              if self._estValide(y = 1):
+                                    self.position[1] += 1
+                                    
 
 
                               
