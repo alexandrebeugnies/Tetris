@@ -187,7 +187,11 @@ class Jeu(object):
                                                       #print("Position occupee sur le plateau")
                                                       return False
                                           return True 
-
+                  def _poserPiece(self):
+                        print("La piece est posee")
+                        if self.position[1] <= 0:
+                              self.perdu = True
+                              
 
                               
 
