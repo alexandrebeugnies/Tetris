@@ -229,7 +229,9 @@ class Jeu(object):
                         self.pieces += 1
                         self.position = [int(DIM_PLATEAU[0] / 2)-2, -4, 0]
                         self._calculerDonneesPieceCourante()
-                        self.dernier_mouvement  = self.derniere_chute = time.time()                        
+                        self.dernier_mouvement  = self.derniere_chute = time.time()
+                  def _gererEvenements(self):
+                        event = self._getEvent()                         
 
                               
 
