@@ -253,7 +253,17 @@ class Jeu(object):
                         elif event == K_UP:
                               print("Mouvement de rotation")
                               if self._estValide(r=1):
-                                    self.position[2] = (self.position[2] + 1) %len(self.current)            
+                                    self.position[2] = (self.position[2] + 1) %len(self.current) 
+                        elif event == K_SPACE:
+                              print("Mouvement de chute %s / %s" % (self.position, self.coordonnees))      
+                              if self.position[1] <= 0:
+                                    self.position[1] = 1
+                                    self._calculerDonneesPieceCourante()
+                                    a = 0
+                                    while self._estValide(y=a):
+                                          a += 1
+                                    self.position[1] += a-1
+                              self._calculerDonneesPieceCourante()           
 
 
                               
