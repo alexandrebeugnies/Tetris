@@ -175,8 +175,11 @@ class Jeu(object):
                                         # print("Rotation testee : %s" % coordonnees) 
                                     for cx, cy in coordonnees:
                                           if not 0 <= x + cx < max_x:
-                                                print("Non valide en X: cx=%s, x=%s" % (cx, x))
-                                          return False
+                                                #print("Non valide en X: cx=%s, x=%s" % (cx, x))
+                                                return False
+                                          elif cy < 0:
+                                                continue
+                                          
 
 
                               
