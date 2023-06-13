@@ -217,6 +217,9 @@ class Jeu(object):
                                     if lignes >= 4 :
                                           self.tetris += 1
                                           self.score += self.niveau * self.tetris 
+                                    # Travail avec la piece courante termine
+                                    self.current = None
+                                    
 
                               
 
