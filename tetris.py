@@ -3,10 +3,11 @@
 import random
 import time
 import pygame
-import sys
-from pygame.locals import *
 
-from constantes import *
+import sys
+
+from pygame.locals import *
+from constants import *
 
 PIECES = {
     'O':{
@@ -58,13 +59,7 @@ COULEURS = {
       
 }
 
-for k,v in PIECES.items():
-    print(k)
-    for p in v:
-            print (p, '\n')
 
-for name, rotations in PIECES.items():
-      PIECES[name] = [[[int(i) for i in p] for p in r.splitlines()] for r in rotations] 
 
 TAILLE_FENETRE = 640, 480
 DIM_PLATEAU = 10, 20
@@ -87,6 +82,7 @@ POSITION_TETRIS = POSITION_SCORE[0], 210
 POSITION_NIVEAU = POSITION_SCORE[0], 240
 
 GRAVITE = 0.35
+
 
 class Jeu(object):
       def __init__(self):
