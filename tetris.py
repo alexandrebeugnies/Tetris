@@ -301,6 +301,15 @@ class Jeu(object):
                                                 self._afficherTexte('Niveau : >%s' % self.niveau, POSITION_NIVEAU)
                                                 self.rendre()
 
-                              
+                  def play(self):
+                        print("Jouer")
+                        self.surface.fill(COULEURS.get(0))
+                        self._first()
+                        while not self.perdu:
+                              if self.current is None:
+                                    self._next()
+                              self._gererEvenements()
+                              self._gererGravite()
+                              self._dessinerPlateau()            
 
 
