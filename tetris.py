@@ -208,6 +208,15 @@ class Jeu(object):
                                     lignes = len(completees)
                                     for i in completees:
                                           self.plateau.pop(i)
+                                    for i in range(lignes):
+                                          self.plateau.insert(0, [0] * DIM_PLATEAU[0])
+                                    # calculer le score et autre
+                                    self.lignes += lignes
+                                    self.score += lignes * self.niveau
+                                    self.niveau = int(self.lignes / 10 ) + 1
+                                    if lignes >= 4 :
+                                          self.tetris += 1
+                                          self.score += self.niveau * self.tetris 
 
                               
 
