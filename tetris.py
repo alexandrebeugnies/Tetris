@@ -250,7 +250,10 @@ class Jeu(object):
                               print("Mouvement vers le bas")
                               if self._estValide(y = 1):
                                     self.position[1] += 1
-                                    
+                        elif event == K_UP:
+                              print("Mouvement de rotation")
+                              if self._estValide(r=1):
+                                    self.position[2] = (self.position[2] + 1) %len(self.current)            
 
 
                               
