@@ -231,7 +231,15 @@ class Jeu(object):
                         self._calculerDonneesPieceCourante()
                         self.dernier_mouvement  = self.derniere_chute = time.time()
                   def _gererEvenements(self):
-                        event = self._getEvent()                         
+                        event = self._getEvent()
+                        if event == K_p:
+                              print("Pause")
+                              self.surface.fill(COULEURS.get(0))
+                              self._afficherTexte('Pause',CENTRE_FENETRE,font = 'titre')
+                              self._afficherTexte('Appuyer sur une touche ...',POS)
+                              self._attente()
+
+
 
                               
 
