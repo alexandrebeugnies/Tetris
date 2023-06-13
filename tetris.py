@@ -289,7 +289,12 @@ class Jeu(object):
                                     position = j, i
                                     coordonnees = tuple([START_PLATEAU[k] + position[k] * TAILLE_BLOC[k] for k in range(2)])
                                     pygame.draw.rect(self.surface, couleur, coordonnees + TAILLE_BLOC)
-                  
+                                    if self.current is not None:
+                                          for position in self.coordonnees:
+                                                couleur = COULEURS.get(self._getCurrentPieceColor())
+                                                coordonnees = tuple([START_PLATEAU[k] + position[k] *TAILLE_BLOC[k] for k in range(2)])
+                                                pygame.draw.rect(self.surface, couleur, coordonnees + TAILLE_BLOC)
+                                                
                               
 
 
